@@ -32,15 +32,24 @@
       </ion-col>
       <ion-col size="12">
         <ion-item>
+          <ion-label position="floating">Gambar</ion-label>
+          <ion-input [(ngModel)]="product.gambar"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
           <ion-label position="floating">email </ion-label>
           <ion-input [(ngModel)]="product.user_email"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="12">
-        <ion-item>
-          <ion-label position="floating">status</ion-label>
-          <ion-input [(ngModel)]="product.status_products"></ion-input>
-        </ion-item>
+         <ion-item>
+      <ion-label>Status Products</ion-label>
+      <ion-select [(ngModel)]="product.status_products">
+        <ion-select-option value="tersedia">Tersedia</ion-select-option>
+        <ion-select-option value="habis">Habis</ion-select-option>
+      </ion-select>
+    </ion-item>
       </ion-col>
       <!-- Add more input fields for other product attributes -->
 
