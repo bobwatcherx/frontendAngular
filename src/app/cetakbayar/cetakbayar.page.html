@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/historypayment"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Cetak Bayar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Data Bayar</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Nama Barang: {{ nama_barang }}</p>
+      <p>Email: {{ email }}</p>
+      <p>Grand Total: {{ grandtotal }}</p>
+      <p>Harga Satuan: {{ harga_satuan }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="ion-text-center">
+    <ion-button expand="full" class="print-button" (click)="printAsPdf()">Print</ion-button>
+  </div>
+</ion-content>

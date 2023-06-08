@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/superadmin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Product Name</ion-label>
+          <ion-input [(ngModel)]="product.judul"></ion-input>
+        </ion-item>
+      </ion-col>
+     
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Sinopsis</ion-label>
+          <ion-input [(ngModel)]="product.sinopsis"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">product price</ion-label>
+          <ion-input [(ngModel)]="product.products_price"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">email </ion-label>
+          <ion-input [(ngModel)]="product.user_email"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">status</ion-label>
+          <ion-input [(ngModel)]="product.status_products"></ion-input>
+        </ion-item>
+      </ion-col>
+      <!-- Add more input fields for other product attributes -->
+
+      <ion-col size="12">
+        <ion-button expand="full" color="primary" (click)="updateProduct()">Save Changes</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

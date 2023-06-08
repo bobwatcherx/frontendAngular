@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Tambah Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Judul</ion-label>
+      <ion-input type="text" [(ngModel)]="productData.judul"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gambar</ion-label>
+      <ion-input type="text" [(ngModel)]="productData.gambar"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sinopsis</ion-label>
+      <ion-textarea [(ngModel)]="productData.sinopsis"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Products Type</ion-label>
+      <ion-select [(ngModel)]="productData.products_type">
+        <ion-select-option value="fiksi">Fiksi</ion-select-option>
+        <ion-select-option value="nyata">Nyata</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Products Price</ion-label>
+      <ion-input type="number" [(ngModel)]="productData.products_price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Status Products</ion-label>
+      <ion-select [(ngModel)]="productData.status_products">
+        <ion-select-option value="tersedia">Tersedia</ion-select-option>
+        <ion-select-option value="habis">Habis</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>User Email</ion-label>
+      <ion-input type="email" [(ngModel)]="productData.user_email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Author</ion-label>
+      <ion-input type="text" [(ngModel)]="productData.author"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="onSubmit()">Simpan</ion-button>
+</ion-content>

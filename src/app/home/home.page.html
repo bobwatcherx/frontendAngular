@@ -1,0 +1,24 @@
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+    <h2><b>LOGIN</b></h2>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item fill="outline">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button (click)="doLogin()" expand="block"><ion-icon name="person-circle-outline"></ion-icon>LOGIN</ion-button>
+
+
+  <h2><b position="center">More : </b></h2>
+  <ion-button (click)="doRegister()" expand="block">Register</ion-button>
+  </div>
+</ion-content>

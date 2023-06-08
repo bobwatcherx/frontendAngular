@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-books"></ion-back-button>
+    </ion-buttons>
+    <ion-title><b>Checkout</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{judul}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img 
+  alt="Silhouette of mountains"
+  [src]="gambar"
+/>
+
+          </ion-thumbnail>
+          <ion-label>Rp. {{price}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <div class="qty-selector">
+          <ion-label>
+            Anda memesan Sebanyak
+            <br/>
+              {{counter}} Pcs
+            </ion-label>
+
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="address">
+    <ion-item lines="none">
+      Jawa Barat, Karawang, Lemahabang
+      <ion-badge slot="end"></ion-badge>
+    </ion-item>
+  </div>
+
+  <hr />
+
+  <div class="cart-total">
+    <ion-item lines="none">
+      <ion-label>Sub Total</ion-label>
+      <ion-label slot="end" class="ion-text-right">Rp .{{counter * price}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Discount</ion-label>
+      <ion-label slot="end" class="ion-text-right">10%</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Shipping</ion-label>
+      <ion-label slot="end" class="ion-text-right">Rp. 10</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Total</ion-label>
+      <ion-label slot="end" class="ion-text-right">Rp. {{grandtotal}}</ion-label>
+    </ion-item>
+  </div>
+</ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button
+    (click)="doConfirm()"
+      expand="block"
+      class="main-button"
+      routerLink="/confirm"
+      routerDirection="forward"
+      >Confirm</ion-button
+    >
+  </ion-toolbar>
+</ion-footer>

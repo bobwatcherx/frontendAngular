@@ -1,0 +1,13 @@
+// Mengatur gambar agar berada di tengah (vertikal dan horizontal)
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Mengatur ukuran gambar
+.image-size {
+    width: 20px;
+    height: 20px;;
+    object-fit: cover;
+  }

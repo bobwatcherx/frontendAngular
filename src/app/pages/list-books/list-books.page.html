@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="orange">
+    <ion-title><b>BOOKSTORE</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <h1>Pilih Product</h1>
+         <a [routerLink]="'/historypayment'">History Pembayaran</a>
+      </ion-card-header>
+
+      <ion-card-content>
+  <ion-list>
+    <ion-item *ngFor="let book of books">
+      <ion-thumbnail slot="start">
+        <img 
+          (click)="detail(book)"
+          [src]="book.gambar"
+          alt="Book Cover" />
+      </ion-thumbnail>
+      <ion-card-header>
+        <ion-card-title>{{ book.judul }}</ion-card-title>
+        <ion-card-subtitle>Rp. {{ book.harga }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <br/>
+        <div style="display: flex; flex-direction: row;">
+          <p>
+            <ion-button fill="clear" (click)="decrement()">-</ion-button>
+            <ion-label>{{ counter }}</ion-label>
+            <ion-button fill="clear" (click)="increment()">+</ion-button>
+          </p>
+        </div>
+      </ion-card-content>
+      <ion-button expand="block" (click)="doCheckout(book.judul, book.harga,book.gambar)">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-card-content>
+
+    </ion-card>
+  </div>
+</ion-content>

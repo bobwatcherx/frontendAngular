@@ -1,0 +1,49 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="arrow-back" routerLink="'/home"></ion-icon>
+      <ion-card-title>Update buku</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-input label="Judul Buku" [(ngModel)]="form.judul" [ngModelOptions]="{standalone: true}" label-placement="floating" fill="outline" placeholder="Masukkan Judul Buku"></ion-input>
+      <br>
+      <ion-input label="Author" [(ngModel)]="form.author" [ngModelOptions]="{standalone: true}" label-placement="floating" fill="outline" placeholder="Masukkan Author Buku"></ion-input>
+      <br>
+      <ion-input label="products_price" [(ngModel)]="form.products_price" [ngModelOptions]="{standalone: true}" label-placement="floating" fill="outline" placeholder="Masukkan Harga"></ion-input>
+      <br>
+      <ion-input label="Sinopsis" [(ngModel)]="form.sinopsis" [ngModelOptions]="{standalone: true}" label-placement="floating" fill="outline" placeholder="Masukkan Sinopsis Buku"></ion-input>
+     
+      <ion-input
+      label="status_products"
+      [(ngModel)]="form.status_products" [ngModelOptions]="{standalone: true}" 
+
+      label-placement="floating"
+      fill="outline"
+      placeholder="Masukkan status Buku"
+    ></ion-input>
+
+      <ion-input
+        label="User Email"
+        [(ngModel)]="form.user_email" [ngModelOptions]="{standalone: true}" 
+        label-placement="floating"
+        fill="outline"
+        placeholder="Masukkan User Email Anda"
+      ></ion-input>
+      <br />
+      <ion-input
+        label="products_type"
+        [(ngModel)]="form.products_type" [ngModelOptions]="{standalone: true}" 
+
+        label-placement="floating"
+        fill="outline"
+        placeholder="Masukkan kategori Buku"
+      ></ion-input>
+      <br />
+    </ion-card-content>
+   
+  <ion-button expand="block" (click)="doSubmitWithValidateFormInput()"
+    >edit</ion-button>
+  </ion-card>
+</ion-content>
+ 

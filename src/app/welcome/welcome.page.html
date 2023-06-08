@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome {{ form.username }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-router-outlet></ion-router-outlet>
+  <ion-tab-bar slot="Home">
+    <ion-tab-button tab="Home">
+      <ion-icon name="home-outline"></ion-icon>
+      Home
+    </ion-tab-button>
+    
+    <ion-tab-button tab="News">
+      <ion-icon name="newspaper-outline"></ion-icon>
+      News
+    </ion-tab-button>
+
+    <ion-tab-button (click)="doLogout()" tab="Logout">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Logout
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+

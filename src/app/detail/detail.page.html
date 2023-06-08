@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title><b>BOOKSTORE</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card position="center" >
+    <img alt="Silhouette of mountains" src="../../assets/list-books/filosofi-teras.jpg" />
+    <ion-card-header>
+      <ion-card-title>Filosofi Teras</ion-card-title>
+      <ion-card-subtitle>Henry Manampiring</ion-card-subtitle>
+      <ion-card-subtitle>Rp. 98,000</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Filosofi Teras adalah sebuah buku pengantar filsafat Stoa yang dibuat khusus sebagai panduan moral anak muda. 
+      Buku ini ditulis untuk menjawab permasalahan tentang tingkat kekhawatiran yang cukup tinggi dalam skala nasional, terutama yang dialami oleh anak muda.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="doCheckout()" expand="block">Checkout</ion-button>
+</ion-content>
