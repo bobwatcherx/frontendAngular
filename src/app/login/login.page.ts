@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiServiceService } from '../api/api-service.service';
 import jwt_decode from 'jwt-decode';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,13 +18,21 @@ export class LoginPage implements OnInit {
   constructor(
     private api : ApiServiceService,
     private router : Router,
-    
+      private toastController: ToastController
   ) {}
 
   ngOnInit() {
     
   }
-  
+  async presentToast(message: string) {
+  const toast = await this.toastController.create({
+    message: message,
+    duration: 2000, // Display duration in milliseconds
+    position: 'bottom' // Set the position of the toast message
+  });
+
+  await toast.present();
+}
     doLogin(){
       this.api.Login(this.form)
       .subscribe((res:any)=> {
@@ -52,10 +61,11 @@ export class LoginPage implements OnInit {
         localStorage.setItem('email',this.form.email) 
         localStorage.setItem('token',res.token); 
         console.log('berhasil')
-
+         this.presentToast('Berhasil login'); // Display success toast
       },err=>{ 
         // this.presentAlert('Account Unavailable'); 
         console.log('error')
+        this.presentToast('username dan password Anda salah' ); // Display error toast
       }); 
     }
   
