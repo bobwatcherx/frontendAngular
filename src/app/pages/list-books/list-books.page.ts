@@ -31,7 +31,7 @@ logout() {
     }
   }
 
-  doCheckout(judul: string, price: number,gambar:string) {
+  doCheckout(judul: string, price: number,gambar:string,sinopsis:string) {
   const subtotal = this.counter * price;
   const discount = subtotal * 0.1;
   const grandtotal = (subtotal - discount) - 10;
@@ -42,6 +42,7 @@ logout() {
        judul: judul,
       price: price,
       gambar:gambar,
+      sinopsis:sinopsis,
       grandtotal:grandtotal
     }
   };
@@ -62,6 +63,7 @@ logout() {
   getListBooks() {
     this.api.GetListBooks().subscribe((res: any) => {
       this.books = res;
+      console.log(res);
     });
   }
 }

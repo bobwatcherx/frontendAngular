@@ -13,7 +13,7 @@ export class CheckoutPage implements OnInit {
   judul: string = '';
   gambar: string = '';
   grandtotal: number = 0;
-
+  sinopsis:string = "";
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -47,6 +47,7 @@ export class CheckoutPage implements OnInit {
       this.judul = navigationState['judul'] || '';
       this.gambar = navigationState['gambar'] || '';
       this.grandtotal = navigationState['grandtotal'] || '';
+      this.sinopsis = navigationState['sinopsis'] || '';
     }
   }
 }

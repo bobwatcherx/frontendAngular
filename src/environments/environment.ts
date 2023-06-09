@@ -4,7 +4,8 @@
 
 export const environment = {
   production: true,
-  ApiURL : 'http://localhost:8000'
+  ApiURL : 'https://book-store-bobwatcherx.vercel.app/api'
+  // ApiURL : 'http://localhost:8000'
 };
 
 /*

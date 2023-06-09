@@ -24,12 +24,17 @@
 <br>
 <ion-item fill="outline">
   <ion-label position="floating">Password</ion-label>
-  <ion-input [(ngModel)]="form.password" [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
+  <ion-input [(ngModel)]="form.password"
+  type="password"
+   [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
 </ion-item>
 <br/>
 <ion-item fill="outline">
   <ion-label position="floating">Confirm Password</ion-label>
-  <ion-input [(ngModel)]="form.confirmation_password" [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
+  <ion-input 
+  type="password"
+  
+  [(ngModel)]="form.confirmation_password" [ngModelOptions]="{standalone: true}" placeholder="Enter text"></ion-input>
 </ion-item>
 <br>
 <ion-button
