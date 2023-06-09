@@ -34,7 +34,7 @@ export class HomePage {
     console.log(this.from);
 
     try {
-      const res = await fetch(environment.ApiURL + '/api/login',{
+      const res = await fetch('https://book-store-bobwatcherx.vercel.app/api/api/login',{
         method:"POST",
         headers: {
           "Content-Type": "application/json",
