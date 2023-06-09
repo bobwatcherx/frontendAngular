@@ -1,3 +1,10 @@
 ion-item {
     --padding-start: 0;
   }
+  .thumbnail-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

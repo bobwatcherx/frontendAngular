@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Admin</ion-title>
+    <ion-title>halaman Admin</ion-title>
     <ion-buttons slot="end">
       <ion-button routerLink="/tambahproduct">Create Books</ion-button>
       <ion-button (click)="logout()">
@@ -10,10 +10,11 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let book of books; let i = index;">
+      <ion-col size="4" *ngFor="let book of books; let i = index;">
         <ion-card>
           <img [src]="book.gambar" alt="Book Image">
           <ion-card-header>
