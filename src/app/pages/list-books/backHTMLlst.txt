@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title><b>BOOKSTORE</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" >
+    <ion-card>
+      <ion-card-header>
+      <ion-row style="justify-content: center;">
+        <h1>Pilih Product</h1>
+      </ion-row>
+      <ion-row style="justify-content: center;">
+
+        <a [routerLink]="'/historypayment'">History Pembayaran</a>
+
+      </ion-row>
+
+      </ion-card-header>
+      <ion-card-content 
+      
+      >
+        <ion-list lines="none"
+        >
+          <ion-item *ngFor="let book of books">
+            <ion-grid>
+              <ion-row style="justify-content: center;">
+                  <img 
+                    style="width: 150px; height: 100px;
+                    
+                    "
+                    [src]="book.gambar" />
+              </ion-row>
+              <ion-row style="justify-content: center;">
+                  <ion-card-header>
+                    <ion-card-title style="font-size: 20px;">{{ book.judul }}</ion-card-title>
+                    <ion-card-subtitle>Rp. {{ book.harga }}</ion-card-subtitle>
+                  </ion-card-header>
+                
+              </ion-row>
+              <ion-row style="justify-content: center;">
+              <!-- <ion-col size="12"> -->
+                <ion-button fill="clear" (click)="decrement()" size="small">-</ion-button>
+                <ion-label>{{ counter }}</ion-label>
+                <ion-button fill="clear" (click)="increment()" size="small">+</ion-button>
+              <!-- </ion-col> -->
+            </ion-row>
+
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button expand="block" (click)="doCheckout(book.judul, book.harga, book.gambar, book.sinopsis)">
+                    <ion-icon slot="icon-only" name="cart"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
